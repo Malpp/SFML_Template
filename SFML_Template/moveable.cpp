@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "moveable.h"
-#include "game.h"
+#include "Game.h"
 
 void Moveable::update( float delta_time_ )
 {

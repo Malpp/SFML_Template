@@ -48,6 +48,9 @@
     <ClInclude Include="moveable.h">
       <Filter>Header Files\Base</Filter>
     </ClInclude>
+    <ClInclude Include="resourcehandler.h">
+      <Filter>Header Files\Other</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="game.cpp">
@@ -64,6 +67,9 @@
     </ClCompile>
     <ClCompile Include="moveable.cpp">
       <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcehandler.cpp">
+      <Filter>Source Files\Other</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

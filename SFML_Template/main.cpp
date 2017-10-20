@@ -1,7 +1,7 @@
 // SFML_Template.cpp : Defines the entry point for the console application.
 //
 #include "stdafx.h"
-#include "game.h"
+#include "Game.h"
 
 int main()
 {

@@ -1,9 +1,11 @@
 #include "stdafx.h"
-#include "game.h"
+#include "Game.h"
+
+ResourceHandler Game::resource_handler_;
 
 void Game::init()
 {
-	
+
 }
 
 void Game::input()
@@ -39,14 +41,14 @@ void Game::update()
 	float timeElapsed = clock.restart().asSeconds();
 
 	//Fps counter
-	frameTime += timeElapsed;
-	if (frameTime > 1)
+	frame_time_ += timeElapsed;
+	if (frame_time_ > 1)
 	{
-		std::cout << "FPS: " << frameCounter << "\n";
-		frameTime = 0;
-		frameCounter = 0;
+		std::cout << "FPS: " << frame_counter_ << "\n";
+		frame_time_ = 0;
+		frame_counter_ = 0;
 	}
-	frameCounter++;
+	frame_counter_++;
 
 	//Add new stuff below this
 }
@@ -61,20 +63,6 @@ void Game::draw()
 	window->display();
 }
 
-void Game::renderingThread( sf::RenderWindow* window )
-{
-	// the rendering loop
-	while (window->isOpen())
-	{
-		window->clear();
-		// draw...
-
-		// end the current frame
-		window->display();
-	}
-}
-
-
 Game::Game()
 {
 	//Init window and view
@@ -85,6 +73,8 @@ Game::Game()
 	clock.restart();
 	srand( time( nullptr ) );
 	rand();
+
+	resource_handler_.add_texture( "ben.png" );
 }
 
 Game::~Game()
